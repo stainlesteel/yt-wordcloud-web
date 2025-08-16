@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt-wordcloud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+      body {
+        text-align: center;
+     } 
+    </style>
+</head>
+<body>
+    <br>
+    <article>
+      <h1>yt-wordcloud-web</h1>
+      <p>Turn a youtube video to a wordcloud picture.</p>
+      <form method="post" action="/entry">
+        <label for="url">Enter a URL, and not the youtu.be one!</label>
+        <br>
+        <input type="url" name="url" id="url" placeholder="URL" aria-label="Url" aria-invalid="true">
+        <small>{{ error_mesg }}</small>
+        <button type="submit">Submit</button>
+      </form>
+      <img src="data:image/png;base64, {{ wordcloud }}" alt="wordcloud">
+    </article>
+</body>
+</html>
