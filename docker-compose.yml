@@ -1,0 +1,6 @@
+services:
+  yt-wordcloud-web:
+    build: .
+    container_name: yt-wordcloud-web
+    ports:
+      - "8000:8000"
