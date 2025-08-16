@@ -1,6 +1,7 @@
 services:
   yt-wordcloud-web:
     build: .
+    image: stainlesteel/yt-wordcloud-web:latest
     container_name: yt-wordcloud-web
     ports:
       - "8000:8000"
