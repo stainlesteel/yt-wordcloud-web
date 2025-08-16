@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: PUSH the Docker image
-      run: docker login --username ${{ secrets.USER }} --password ${{ DOCKER_PASS }}
+      run: docker login --username ${{ secrets.USER }} --password ${{ secrets.DOCKER_PASS }}
       
     - name: PUSH the Docker image
       run: docker push stainlesteel/yt-wordcloud-web:latest
